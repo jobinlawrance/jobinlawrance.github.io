@@ -1,7 +1,9 @@
 @import './assets/varriable.scss';
-body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $background-blue
+  background-color: $background-blue;
+  overflow-x: hidden; 
+  overflow-y: hidden; 
+  text-rendering: optimizeLegibility;
 }
