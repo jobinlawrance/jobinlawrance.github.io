@@ -63,6 +63,12 @@ var webpackConfig = merge(baseWebpackConfig, {
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
+      meta: [
+        {
+          name: 'description',
+          content: 'A freelance developer based in Mubmai who develops Mobile & Web Applications.'
+        }
+      ],
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),

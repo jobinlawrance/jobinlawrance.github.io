@@ -31,7 +31,13 @@ module.exports = merge(baseWebpackConfig, {
       appMountId: 'app',
       mobile: true,
       inject: true,
-      title: 'Jobin Lawance'
+      title: 'Jobin Lawance',
+      meta: [
+        {
+          name: 'description',
+          content: 'A freelance developer based in Mubmai who develops Mobile & Web Applications'
+        }
+      ],
     }),
     new FriendlyErrorsPlugin()
   ]
