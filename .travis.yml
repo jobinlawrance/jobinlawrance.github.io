@@ -6,7 +6,6 @@ cache:
   directories:
     - node_modules
 install:
-- npm install
-- npm install typings -g
+- yarn install
 script:
 - bash ./deploy.sh
