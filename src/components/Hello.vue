@@ -2,12 +2,22 @@
   <section class="hero is-fullheight ">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title is-1">
-          Jobin Lawrance
-        </h1>
-        <h2 class="subtitle is-3">
-          {{ caption }}
-        </h2>
+        <div class="is-hidden-touch">
+          <h1 class="title is-1">
+            {{ name }}
+          </h1>
+          <h2 class="subtitle is-3">
+            {{ caption }}
+          </h2>
+        </div>
+        <div class="is-hidden-desktop">
+          <h1 class="title is-3">
+            {{ name }}
+          </h1>
+          <h2 class="subtitle is-5">
+            {{ caption }}
+          </h2>
+        </div>
       </div>
     </div>
   </section>
@@ -29,4 +39,5 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
   @import 'main.scss';
+
 </style>
