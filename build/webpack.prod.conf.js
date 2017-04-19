@@ -51,8 +51,11 @@ var webpackConfig = merge(baseWebpackConfig, {
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: config.build.index,
-      template: 'index.html',
+      template: require('html-webpack-template'),
+      appMountId: 'app',
+      mobile: true,
       inject: true,
+      title: 'Jobin Lawance',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
