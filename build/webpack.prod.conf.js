@@ -119,8 +119,7 @@ var webpackConfig = merge(baseWebpackConfig, {
           href : "/static/safari-pinned-tab.svg",
           color : "#27293f"
         }
-      ]
-    }),
+      ],
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
