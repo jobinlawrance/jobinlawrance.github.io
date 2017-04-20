@@ -36,6 +36,10 @@ module.exports = merge(baseWebpackConfig, {
         {
           name: 'description',
           content: 'A freelance developer based in Mubmai who develops Mobile & Web Applications'
+        },
+        {
+          name: 'viewport',
+          contetn: 'width=device-width, initial-scale=1'
         }
       ],
     }),
