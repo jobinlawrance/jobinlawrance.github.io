@@ -4,6 +4,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: $background-blue;
   overflow-x: hidden; 
-  overflow-y: hidden; 
+  overflow-y: auto; 
   text-rendering: optimizeLegibility;
 }
