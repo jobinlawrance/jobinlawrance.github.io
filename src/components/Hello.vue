@@ -29,7 +29,7 @@
     data() {
       return {
         name: 'Jobin Lawrance',
-        caption: 'Web & App Developer'
+        caption: 'Web & App Developer.'
       }
     }
   }
