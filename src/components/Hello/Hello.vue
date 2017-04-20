@@ -11,20 +11,20 @@
               {{ caption }}
             </h2>
             <h5 class="subtitle is-4">
-              <a href="#work">Work</a>
-              <a href="#">Contact</a>
+              <a href="#work">&lt;Work&gt;</a>
+              <a href="#">&lt;Contact&gt;</a>
             </h5>
           </div>
           <div class="is-hidden-desktop">
-            <h1 class="title is-3">
+            <h1 class="title is-2">
               {{ name }}
             </h1>
-            <h2 class="subtitle is-5">
+            <h2 class="subtitle is-4">
               {{ caption }}
             </h2>
-            <h5 class="subtitle is-6">
-              <a href="#work">Work</a>
-              <a href="#">Contact</a>
+            <h5 class="subtitle is-5">
+              <a href="#work">&lt;Work&gt;</a>
+              <a href="#">&lt;Contact&gt;</a>
             </h5>
           </div>
         </div>
@@ -44,7 +44,7 @@
             <span class="work-tag">Backend</span>
           </span>
           <h2 class="subtitle is-5">
-            A taxi hiring service for black & yellow cabs in Mumbai
+            A taxi hiring service for black & yellow cabs in Mumbai.
           </h2>
           
         </div>
