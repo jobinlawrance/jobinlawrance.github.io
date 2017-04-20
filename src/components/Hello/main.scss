@@ -1,6 +1,6 @@
 @import "~bulma";
 @import "~bulma/sass/utilities/variables";
-@import '../assets/varriable.scss';
+@import '../../assets/varriable.scss';
 @import url('https://www.fontify.me/wf/e52f0c651bb8316c49369f533e387f97');
 
 .hero {
@@ -16,4 +16,9 @@
 
 .subtitle {
   color: $yellow
+}
+
+figure {
+  margin: auto;
+    width: 50%;
 }

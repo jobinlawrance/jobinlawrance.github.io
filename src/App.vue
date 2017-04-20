@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Hello from './components/Hello'
+  import Hello from './components/Hello/Hello'
 
   export default {
     name: 'app',

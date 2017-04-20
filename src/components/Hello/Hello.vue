@@ -1,4 +1,5 @@
 <template>
+  
   <section class="hero is-fullheight ">
     <div class="hero-body">
       <div class="container">
@@ -29,7 +30,7 @@
     data() {
       return {
         name: 'Jobin Lawrance',
-        caption: 'Web & App Developer.'
+        caption: 'Web & App Developer'
       }
     }
   }
