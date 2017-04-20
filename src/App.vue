@@ -17,5 +17,5 @@
 </script>
 
 <style lang="sass">
-@import 'App.scss'
+@import 'App.scss';
 </style>
