@@ -48,6 +48,25 @@
   }
 }
 
+#contact {
+  text-align: center;
+  font-family: font119290;
+  .container {
+    padding: 20px;
+  }
+  .section {
+    background-color: $background-blue;
+  }
+  .title {
+    color: $white;
+    margin-bottom: 5px;
+  }
+  a:hover,
+  a:active {
+    color: $yellow;
+  }
+}
+
 // #work .title {
 //   color: $white;
 // }
