@@ -12,7 +12,7 @@
             </h2>
             <h5 class="subtitle is-4">
               <a href="#work">&lt;Work&gt;</a>
-              <a href="#">&lt;Contact&gt;</a>
+              <a href="#contact">&lt;Contact&gt;</a>
             </h5>
           </div>
           <div class="is-hidden-desktop">
@@ -24,7 +24,7 @@
             </h2>
             <h5 class="subtitle is-5">
               <a href="#work">&lt;Work&gt;</a>
-              <a href="#">&lt;Contact&gt;</a>
+              <a href="#contact">&lt;Contact&gt;</a>
             </h5>
           </div>
         </div>
