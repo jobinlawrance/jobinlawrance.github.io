@@ -1,24 +1,53 @@
+@import '../../assets/varriable.scss';
 @import "~bulma";
 @import "~bulma/sass/utilities/variables";
-@import '../../assets/varriable.scss';
 @import url('https://www.fontify.me/wf/e52f0c651bb8316c49369f533e387f97');
-
 .hero {
   background-color: $background-blue;
   text-align: center;
   font-family: font119290;
+  .title {
+    color: $white;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    color: $yellow
+  }
+  a:hover,
+  a:active {
+    color: $yellow;
+  }
 }
 
-.title {
-  color: $white;
-  text-transform: uppercase;
+// a:link,
+// a:visited{
+// }
+#work {
+  text-align: center;
+  font-family: font119290;
+  .title {
+    color: $white;
+    margin-bottom: 5px;
+  }
+  .section {
+    background-color: $background-blue;
+  }
+  .work-tag {
+    background-color: $yellow;
+    color: black;
+    border-radius: 3px;
+    padding: 5px 5px;
+    font-size: .7em;
+  }
+  .subtitle {
+    color: $grey;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    max-width: 586px;
+    margin:15px auto;
+  }
 }
 
-.subtitle {
-  color: $yellow
-}
-
-figure {
-  margin: auto;
-    width: 50%;
-}
+// #work .title {
+//   color: $white;
+// }
