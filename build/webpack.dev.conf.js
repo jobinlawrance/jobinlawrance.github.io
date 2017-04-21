@@ -40,59 +40,103 @@ module.exports = merge(baseWebpackConfig, {
         },
         {
           name: 'viewport',
-          contetn: 'width=device-width, initial-scale=1'
+          contetn: 'width:device-width, initial-scale:1'
         },
         {
-          name : "msapplication-TileColor",
-          content : "#2b5797"
+          name: "msapplication-config",
+          content: "/static/browserconfig.xml?v=lkgWLrAY9xadf"
         },
         {
-          name : "msapplication-TileImage",
-          content : "/static/mstile-144x144.png"
+          name: "msapplication-TileImage",
+          content: "/static/mstile-144x144.png"
         },
         {
-          name : "theme-color",
-          content : "#e1d71e"
+          name: "theme-color",
+          content: "#27293f",
         }
       ],
       links: [{
-          rel: "apple-touch-icon",
-          sizes: "180x180",
-          href: "/static/apple-touch-icon.png"
+          rel : "apple-touch-icon",
+          sizes : "57x57",
+          href : "/static/apple-touch-icon-57x57.png?v:lkgWLrAY9xadf",
+        },
+        {
+          rel : "apple-touch-icon",
+          sizes : "60x60",
+          href : "/static/apple-touch-icon-60x60.png?v:lkgWLrAY9xadf",
+        },
+        {
+          rel : "apple-touch-icon",
+          sizes : "72x72",
+          href : "/static/apple-touch-icon-72x72.png?v:lkgWLrAY9xadf",
+        },
+        {
+          rel : "apple-touch-icon",
+          sizes : "76x76",
+          href : "/static/apple-touch-icon-76x76.png?v:lkgWLrAY9xadf",
+        },
+        {
+          rel : "apple-touch-icon",
+          sizes : "114x114",
+          href : "/static/apple-touch-icon-114x114.png?v:lkgWLrAY9xadf",
+        },
+        {
+          rel : "apple-touch-icon",
+          sizes : "120x120",
+          href : "/static/apple-touch-icon-120x120.png?v:lkgWLrAY9xadf",
+        },
+        {
+          rel : "apple-touch-icon",
+          sizes : "144x144",
+          href : "/static/apple-touch-icon-144x144.png?v:lkgWLrAY9xadf",
+        },
+        {
+          rel : "apple-touch-icon",
+          sizes : "152x152",
+          href : "/static/apple-touch-icon-152x152.png?v:lkgWLrAY9xadf",
+        },
+        {
+          rel : "apple-touch-icon",
+          sizes : "180x180",
+          href : "/static/apple-touch-icon-180x180.png?v:lkgWLrAY9xadf",
         },
         {
           rel : "icon",
           type : "image/png",
-          href : "/static/favicon-32x32.png",
-          sizes : "32x32"
+          href : "/static/favicon-32x32.png?v:lkgWLrAY9xadf",
+          sizes : "32x32",
         },
         {
           rel : "icon",
           type : "image/png",
-          href : "/static/favicon-194x194.png",
-          sizes : "194x194"
+          href : "/static/favicon-194x194.png?v:lkgWLrAY9xadf",
+          sizes : "194x194",
         },
         {
           rel : "icon",
           type : "image/png",
-          href : "/static/android-chrome-192x192.png",
-          sizes : "192x192"
+          href : "/static/android-chrome-192x192.png?v:lkgWLrAY9xadf",
+          sizes : "192x192",
         },
         {
-          rel: "icon",
-          type: "image/png",
-          href: "/static/favicon-16x16.png",
-          sizes: "16x16"
+          rel : "icon",
+          type : "image/png",
+          href : "/static/favicon-16x16.png?v:lkgWLrAY9xadf",
+          sizes : "16x16",
         },
         {
-          rel: "manifest",
-          href: "static/manifest.json"
+          rel : "manifest",
+          href : "/static/manifest.json?v:lkgWLrAY9xadf",
         },
         {
-          rel: "mask-icon",
-          href : "/static/safari-pinned-tab.svg",
+          rel : "mask-icon",
+          href : "/static/safari-pinned-tab.svg?v:lkgWLrAY9xadf",
           color : "#27293f"
-        }
+        },
+        {
+          rel : "shortcut icon",
+          href : "/static/favicon.ico?v=lkgWLrAY9xadf"
+        },
       ]
     }),
     new FriendlyErrorsPlugin()
