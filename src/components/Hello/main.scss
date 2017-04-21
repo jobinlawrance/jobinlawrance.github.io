@@ -29,7 +29,7 @@
   font-family: font119290;
   .title {
     color: $white;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
   .section {
     background-color: $background-blue;
@@ -43,10 +43,15 @@
   }
   .subtitle {
     color: $grey;
-    margin-top: 10px;
-    margin-bottom: 5px;
     max-width: 586px;
     margin:15px auto;
+  }
+  .link {
+    margin-top: -10px;
+  }
+  a:hover,
+  a:active {
+    color: $yellow;
   }
 }
 

@@ -47,7 +47,9 @@
           <h2 class="subtitle is-5">
             A taxi hiring service for black & yellow cabs in Mumbai.
           </h2>
-
+          <h2 class="subtitle link is-5">
+            <a href="https://play.google.com/store/apps/details?id=com.kulocabs&hl=en" target="_blank"> &bull; PlayStore &bull;</a>
+          </h2>
         </div>
         <div class="container">
           </br>
@@ -59,7 +61,9 @@
           <h2 class="subtitle is-5">
             Android app for soccer updates focused mainly on Indian football.
           </h2>
-
+          <h2 class="subtitle link is-5">
+            <a href="https://play.google.com/store/apps/details?id=in.footdream&hl=en" target="_blank"> &bull; PlayStore &bull;</a>
+          </h2>
         </div>
 
         <div class="container">
@@ -71,7 +75,9 @@
           <h2 class="subtitle is-5">
             Web design for independently orgainsed Ted(Tedx) event held annually in St.Xavier's College,Mumbai.
           </h2>
-
+          <h2 class="subtitle link is-5">
+            <a href="http://tedxstxaviersmumbai.com/" target="_blank"> &bull; Website &bull;</a>
+          </h2>
         </div>
         <div class="container">
           </br>
@@ -84,7 +90,9 @@
           <h2 class="subtitle is-5">
             A proof of concept home automation system build with Arduino.
           </h2>
-
+          <h2 class="subtitle link is-5">
+            <a href="https://docs.google.com/document/d/14naLOVSWplC8T1GmL0udrlQ143YAKB2WWerBgnndBwk/edit?usp=sharing" target="_blank"> &bull; Documentation &bull;</a>
+          </h2>
         </div>
       </section>
     </div>
