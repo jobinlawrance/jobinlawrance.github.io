@@ -60,6 +60,9 @@
   font-family: font119290;
   .container {
     padding: 20px;
+    .title {
+      margin-bottom: 10px;
+    }
   }
   .section {
     background-color: $background-blue;
@@ -72,10 +75,8 @@
   a:active {
     color: $yellow;
   }
-  .fa-envelope {
-    font-size: 0.8em;
-  }
   .fa {
+    font-size: 0.8em;
     color: $grey;
   }
 }
