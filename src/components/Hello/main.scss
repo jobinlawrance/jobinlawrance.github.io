@@ -2,6 +2,8 @@
 @import "~bulma";
 @import "~bulma/sass/utilities/variables";
 @import url('https://www.fontify.me/wf/e52f0c651bb8316c49369f533e387f97');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 .hero {
   background-color: $background-blue;
   text-align: center;
@@ -64,6 +66,12 @@
   a:hover,
   a:active {
     color: $yellow;
+  }
+  .fa-envelope {
+    font-size: 0.8em;
+  }
+  .fa {
+    color: $grey;
   }
 }
 

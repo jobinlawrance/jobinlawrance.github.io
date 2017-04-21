@@ -95,12 +95,12 @@
           Contact
         </h2>
         <div class="container is-hidden-touch">
-          <h2 class="title is-4"><a href="https://twitter.com/jobinlawrance/">@jobinlawrance</a></h2>
-          <h2 class="title is-4"><a href="mailto:lawrancejobin@gmail.com">lawrancejobin@gmail.com</a></h2>
+          <h2 class="title is-4"><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/jobinlawrance/">@jobinlawrance</a></h2>
+          <h2 class="title is-4"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:lawrancejobin@gmail.com">lawrancejobin@gmail.com</a></h2>
         </div>
         <div class="container is-hidden-desktop">
-          <h2 class="title is-5"><a href="https://twitter.com/jobinlawrance/">@jobinlawrance</a></h2>
-          <h2 class="title is-5"><a href="mailto:lawrancejobin@gmail.com">lawrancejobin@gmail.com</a></h2>
+          <h2 class="title is-5"><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/jobinlawrance/">@jobinlawrance</a></h2>
+          <h2 class="title is-5"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:lawrancejobin@gmail.com">lawrancejobin@gmail.com</a></h2>
         </div>
       </section>
     </div>
