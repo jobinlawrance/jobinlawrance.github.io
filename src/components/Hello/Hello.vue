@@ -73,7 +73,7 @@
             <span class="work-tag">Web Design</span>
           </span>
           <h2 class="subtitle is-5">
-            Web design for independently orgainsed Ted(Tedx) event held annually in St.Xavier's College,Mumbai.
+            Web design for independently organised Ted(Tedx) event held annually in St.Xavier's College,Mumbai.
           </h2>
           <h2 class="subtitle link is-5">
             <a href="http://tedxstxaviersmumbai.com/" target="_blank"> &bull; Website &bull;</a>
