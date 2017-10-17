@@ -1,5 +1,8 @@
+@import "bulma/sass/utilities/_all.sass";
 @import 'variables.scss';
-@import "bulma";
+@import "bulma/sass/layout/_all.sass";
+@import "bulma/sass/base/_all.sass";
+@import "bulma/sass/elements/title.sass";
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 html {
@@ -21,6 +24,9 @@ html {
   }
   .subtitle {
     color: $yellow
+  }
+  a {
+    
   }
   a:hover,
   a:active {
