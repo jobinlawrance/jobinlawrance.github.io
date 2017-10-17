@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "OCR-B-10 BT";
+    src: url("OCR-B10PitchBT.eot"); /* IE9 */
+    src: url("OCR-B10PitchBT.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("OCR-B10PitchBT.woff") format("woff"), /* chrome, firefox */
+    url("OCR-B10PitchBT.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("OCR-B10PitchBT.svg#OCR-B-10 BT") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
