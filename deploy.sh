@@ -15,6 +15,14 @@ REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
+# decrypt private ssh key using travis environment variables and add to ssh agent
+openssl aes-256-cbc -K $encrypted_43ff211ebe02_key -iv $encrypted_43ff211ebe02_iv -in travis_deploy.enc -out travis_deploy -d
+
+
+chmod 600 travis_deploy
+eval `ssh-agent -s`
+ssh-add travis_deploy
+
 # Clone the existing gh-pages for this repo into out/
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
 git clone $REPO out
@@ -35,13 +43,6 @@ cp -r build/* out/
 cd out
 git config user.name "Travis CI"
 git config user.email "jobinlawrance@gmail.com"
-
-# decrypt private ssh key using travis environment variables and add to ssh agent
-openssl aes-256-cbc -K $encrypted_5ed29cc41e6d_key -iv $encrypted_5ed29cc41e6d_iv -in ../travis_rsa.enc -out travis_rsa -d
-
-chmod 600 travis_rsa
-eval `ssh-agent -s`
-ssh-add travis_rsa
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
