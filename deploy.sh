@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e # Exit with nonzero exit code if anything fails
 
-SOURCE_BRANCH="revamp"
+SOURCE_BRANCH="source"
 TARGET_BRANCH="master"
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
