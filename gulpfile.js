@@ -17,6 +17,7 @@ var
     revdel = require('gulp-rev-delete-original'),
     fontmin = require('gulp-fontmin'),
     gutil = require('gulp-util'),
+    fileinclude = require('gulp-file-include'),
 
     // development mode?
     devBuild = (process.env.NODE_ENV !== 'production'),
@@ -43,6 +44,10 @@ gulp.task('html', function () {
 
     return gulp.src(folder.src + '*.html')
         .pipe(newer(out))
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+          }))
         .pipe(devBuild ? gutil.noop() : htmlclean())
         .pipe(gulp.dest(out));
 });
