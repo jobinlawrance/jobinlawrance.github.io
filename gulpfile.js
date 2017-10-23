@@ -12,12 +12,13 @@ var
     mqpacker = require('css-mqpacker'),
     cssnano = require('cssnano'),
     moduleImporter = require('sass-module-importer'),
-    rev = require('gulp-rev'),
+    RevAll = require('gulp-rev-all'),
     revReplace = require('gulp-rev-replace'),
     revdel = require('gulp-rev-delete-original'),
     fontmin = require('gulp-fontmin'),
     gutil = require('gulp-util'),
     fileinclude = require('gulp-file-include'),
+    gutil = require('gulp-util'),
 
     // development mode?
     devBuild = (process.env.NODE_ENV !== 'production'),
@@ -30,24 +31,37 @@ var
 
 // image processing
 gulp.task('images', function () {
-    var out = folder.build + 'static/';
+    var out = folder.build;
 
-    return gulp.src(folder.src + 'static/**/*')
+    return gulp.src(folder.src + '/**/*.{jpeg,jpg,png,ico,svg}')
         .pipe(newer(out))
-        .pipe(imagemin({ optimizationLevel: 5 }))
+        .pipe(devBuild ? gutil.noop() : imagemin({
+            optimizationLevel: 5
+        }))
         .pipe(gulp.dest(out));
 });
 
+gulp.task('videos', function () {
+
+    var out = folder.build + 'videos/'
+    var src = folder.src + 'videos/';
+
+    return gulp.src(src + '**/*.{mp4,webm}')
+        .pipe(newer(out))
+        .pipe(gulp.dest(out));
+})
+
 // HTML processing
 gulp.task('html', function () {
+
     var out = folder.build;
 
-    return gulp.src(folder.src + '*.html')
+    return gulp.src(folder.src + '/**/*.html')
         .pipe(newer(out))
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
-          }))
+        }))
         .pipe(devBuild ? gutil.noop() : htmlclean())
         .pipe(gulp.dest(out));
 });
@@ -57,7 +71,9 @@ gulp.task('css', function () {
 
     var postCssOpts = [
         // assets({ loadPaths: ['images/'] }),
-        autoprefixer({ browsers: ['last 2 versions', '> 2%'] }),
+        autoprefixer({
+            browsers: ['last 2 versions', '> 2%']
+        }),
         mqpacker
     ];
 
@@ -65,7 +81,7 @@ gulp.task('css', function () {
         postCssOpts.push(cssnano);
     }
 
-    return gulp.src(folder.src + 'scss/main.scss')
+    return gulp.src(folder.src + 'scss/*.scss')
         .pipe(sass({
             importer: moduleImporter(),
             outputStyle: 'nested',
@@ -79,19 +95,31 @@ gulp.task('css', function () {
 });
 
 gulp.task('revision', ['css'], function () {
-    return gulp.src([folder.build + "**/*.css"])
-        .pipe(rev())
+
+    var sources = [folder.build + "**/*.css"]
+
+    if (!devBuild) {
+        sources.push(folder.build + "**/*.{mp4,webm}")
+    }
+
+    return gulp.src(sources)
+        .pipe(RevAll.revision({
+            includeFilesInManifest: ['.css', '.js', '.jpg', '.mp4', '.webm']
+        }))
         .pipe(revdel())
         .pipe(gulp.dest(folder.build))
-        .pipe(rev.manifest())
+        .pipe(RevAll.manifestFile())
         .pipe(gulp.dest(folder.build))
 });
 
 gulp.task("revreplace", ['revision'], function () {
     var manifest = gulp.src("./" + folder.build + "/rev-manifest.json");
 
-    return gulp.src(folder.build + "/index.html")
-        .pipe(revReplace({ manifest: manifest }))
+    return gulp.src(folder.build + "/**/*.html")
+        .pipe(revReplace({
+            manifest: manifest,
+            replaceInExtensions: ['.js', '.css', '.html', '.hbs', '.jpg', '.png', '.mp4', '.webm']
+        }))
         .pipe(gulp.dest(folder.build));
 });
 
@@ -101,6 +129,32 @@ gulp.task('fontmin', function () {
         .pipe(gulp.dest(folder.build + 'fonts'));
 });
 
-gulp.task('run', ['fontmin', 'images', 'html', 'css', 'revision', 'revreplace'])
+function getTasks() {
+    var tasks = ['fontmin', 'images', 'videos', 'html', 'css'];
+
+    if (!devBuild) {
+        tasks.push('revision', 'revreplace');
+    }
+
+    return tasks;
+};
+
+gulp.task('watch', function() {
+    
+      // image changes
+      gulp.watch(folder.src + 'images/**/*', ['images']);
+    
+      // html changes
+      gulp.watch(folder.src + '/**/*.html', ['html']);
+    
+      // javascript changes
+      gulp.watch(folder.src + 'videos/**/*', ['videos']);
+    
+      // css changes
+      gulp.watch(folder.src + 'scss/**/*', ['css']);
+    
+    });
+
+gulp.task('run', getTasks())
 
 gulp.task('default', ['run']);

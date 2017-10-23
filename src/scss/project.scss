@@ -1,0 +1,38 @@
+@import "bulma/sass/utilities/_all.sass";
+@import '_variables.scss';
+@import '_project_bulma.scss';
+// @import "bulma/sass/layout/_all.sass";
+// @import "bulma/sass/base/_all.sass";
+// @import "bulma/sass/elements/title.sass";
+@import "bulma";
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+  color: $dark-blue;
+  font-family: OCR-B-10 BT;
+}
+
+video {
+  width: 100%;
+  max-width: 350px;
+}
+
+.top-padding {
+  padding-top: 1.5rem;
+}
+
+.emergency-image {
+  width: 100%;
+  height: auto;
+  max-width: 368px;
+}
