@@ -1,10 +1,12 @@
 {
   "css/main.css": "css/main.5bb51c9a.css",
-  "css/project.css": "css/project.81e9f4bf.css",
+  "css/project.css": "css/project.4c07d16a.css",
   "fonts/OCR-B10PitchBT.css": "fonts/OCR-B10PitchBT.908cf948.css",
   "videos/kulo_boarding.mp4": "videos/kulo_boarding.b649e670.mp4",
   "videos/kulo_booking.mp4": "videos/kulo_booking.f082c1de.mp4",
+  "videos/kulo_locations.mp4": "videos/kulo_locations.63d38b16.mp4",
   "videos/kulo_login.mp4": "videos/kulo_login.264be0ad.mp4",
+  "videos/kulo_paytm.mp4": "videos/kulo_paytm.242ce87b.mp4",
   "videos/kulo_ride.mp4": "videos/kulo_ride.f8e5b7b8.mp4",
   "videos/kulo_boarding.webm": "videos/kulo_boarding.72fd2916.webm",
   "videos/kulo_booking.webm": "videos/kulo_booking.c494427f.webm",
