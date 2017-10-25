@@ -250,7 +250,7 @@
                                 </li>
                                 <li><code>State Synchronisation</code> - The most difficult part of the application was to to keep the 
                                     driver application state synced with the passenger application. <b>FCM</b> wasn't reliable in poor network conditions so we ended up using <b>SignalR</b>
-                                    along with it and an extra fallback function that pings the server to confirm states if both of them failed.
+                                    along with it and an extra fallback function that poll the server to confirm states if both of them failed.
                                 </li>
                     </ol>
                 </div>
