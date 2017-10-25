@@ -1,5 +1,7 @@
-# jobinlawrance.github.io
-Personal Portfolio Website
+# jobinlawrance.github.io 
+Personal Portfolio Website  
+
+[![Build Status](https://travis-ci.org/jobinlawrance/jobinlawrance.github.io.svg?branch=source)](https://travis-ci.org/jobinlawrance/jobinlawrance.github.io)  
 
 ## Build setup
 
