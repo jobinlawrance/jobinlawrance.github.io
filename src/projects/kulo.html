@@ -150,8 +150,8 @@
                             Kulo offers wallet integration for online payments (Paytm as of now.)
                             <ul>
                                 <li>Paytm can be added from the main screen or from the Settings.</li>
-                                <li>After entering the mobile number and email-id associated with Paytm, user receives an OTP
-                                    from Paytm to confirm the wallet intergration with Kulo.</li>
+                                <li>After entering the mobile number and email id associated with Paytm, user receives an OTP
+                                    from Paytm to confirm the wallet integration with Kulo.</li>
                                 <li>After successful integration, Paytm can be set as default mode of payment for subsequent
                                     rides.
                                 </li>
@@ -190,7 +190,7 @@
                 <h3 class="title has-text-centered">Technical Details</h3>
                 <div class="content">
                     <p>The above overview was only of the passenger application, the one that users interact with.</p>
-                    <p>There is a seperate appplication used by cab drivers inorder to receive rides, navigate to users etc.
+                    <p>There is a separate application used by cab drivers inorder to receive rides, navigate to users etc.
                         The main flow of event is controlled by the driver application i.e
                         <br>
                         <ol>
@@ -206,7 +206,7 @@
                             </li>
                         </ol>
                     </p>
-                    <p>Both these applications commumnicate using a .Net backend server made by my partner <a target="_blank" href="https://gldraphael.com/">Galdin Raphael</a></p>
+                    <p>Both these applications communicate using a .Net backend server made by my partner <a target="_blank" href="https://gldraphael.com/">Galdin Raphael</a></p>
                 </div>
                 <h4 class="title is-4 has-text-centered">Technologies used</h4>
                 <div class="content">
@@ -216,7 +216,7 @@
                             Google Play Services
                             <ul>
                                 <li><code>Maps</code> - To display user location, driver tracking etc.</li>
-                                <li><code>Places</code> - Place search autocomplete.</li>
+                                <li><code>Places</code> - Place search auto complete.</li>
                                 <li><code>Location</code> - Receive location updates</li>
                             </ul>
                         </li>
@@ -245,12 +245,12 @@
                                 </li>
                                 <li>
                                     <code>Runtime permissions</code> - Handing permissions in Android M and above required requesting permission in one place 
-                                    and handling results in <code>onRequestPermissionsResult()</code>, this wasn't a major hinderance but rather an inconvenience.
+                                    and handling results in <code>onRequestPermissionsResult()</code>, this wasn't a major hindrance but rather an inconvenience.
                                     <br>This issue was solved by <b>RxPermission</b>, it along with <b>RxBinding</b> makes the flow easy by chaining each event using <b>RxJava</b>.
                                 </li>
-                                <li><code>State Synchronisation</code> - The most difficult part of the application wast to keep the 
+                                <li><code>State Synchronisation</code> - The most difficult part of the application was to to keep the 
                                     driver application state synced with the passenger application. <b>FCM</b> wasn't reliable in poor network conditions so we ended up using <b>SignalR</b>
-                                    along with it and an extra fallback funtion that pings the server to confirm states if both of them failed.
+                                    along with it and an extra fallback function that pings the server to confirm states if both of them failed.
                                 </li>
                     </ol>
                 </div>
