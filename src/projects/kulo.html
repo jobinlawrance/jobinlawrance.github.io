@@ -186,12 +186,83 @@
                 </div>
             </div>
 
-            <div class="container has-text-centered download top-padding    ">
+            <div id="tech" class="container top-padding">
+                <h3 class="title has-text-centered">Technical Details</h3>
+                <div class="content">
+                    <p>The above overview was only of the passenger application, the one that users interact with.</p>
+                    <p>There is a seperate appplication used by cab drivers inorder to receive rides, navigate to users etc.
+                        The main flow of event is controlled by the driver application i.e
+                        <br>
+                        <ol>
+                            <li>Accepting Ride requests from users.</li>
+                            <li>Alerting them on arriving at pickup location.</li>
+                            <li>Starting the ride once the passenger boards the cab.</li>
+                            <li>
+                                Finishing the ride.
+                                <ul is-marginless>
+                                    <li>In case of online payment, the driver enters the fare amount and user OTP. This amount
+                                        is then deducted from the user associated wallet account. </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </p>
+                    <p>Both these applications commumnicate using a .Net backend server made by my partner <a target="_blank" href="https://gldraphael.com/">Galdin Raphael</a></p>
+                </div>
+                <h4 class="title is-4 has-text-centered">Technologies used</h4>
+                <div class="content">
+                    Both the applications (passenger and driver) are native android applications build using Java.
+                    <ol>
+                        <li>
+                            Google Play Services
+                            <ul>
+                                <li><code>Maps</code> - To display user location, driver tracking etc.</li>
+                                <li><code>Places</code> - Place search autocomplete.</li>
+                                <li><code>Location</code> - Receive location updates</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Firebase
+                            <ul>
+                                <li><code>Crash</code> - Crash Reporting.</li>
+                                <li><code>Cloud Messaging</code> - Push Notification.</li>
+                            </ul>
+                        </li>
+                        <li><code>Dagger</code> - Dependency injection.</li>
+                        <li><code>RxJava</code> - Async event based programming.</li>
+                        <li><code>RxPermission</code> - Runtime permissions.</li>
+                        <li><code>RxBindings</code> - RxJava binding APIs for Android UI.</li>
+                        <li><code>Glide</code> - Image processing and loading.</li>
+                        <li><code>Volley</code> - Networking.</li>
+                        <li><code>Butterknife</code> - View Injection.</li>
+                    </ol>
+                </div>
+                <h4 class="title is-4 has-text-centered">Challenges Faced</h4>
+                <div class="content">
+                    <ol>
+                            <li>
+                                    <code>Networking</code> - Initially, all the networking was done using AsyncTasks, but as requirements became complex it became difficult to maintain code.
+                                   <br> The solution was <b>RxJava</b>, it made network request chaining or combining results of two requests very easy to implement and debug.
+                                </li>
+                                <li>
+                                    <code>Runtime permissions</code> - Handing permissions in Android M and above required requesting permission in one place 
+                                    and handling results in <code>onRequestPermissionsResult()</code>, this wasn't a major hinderance but rather an inconvenience.
+                                    <br>This issue was solved by <b>RxPermission</b>, it along with <b>RxBinding</b> makes the flow easy by chaining each event using <b>RxJava</b>.
+                                </li>
+                                <li><code>State Synchronisation</code> - The most difficult part of the application wast to keep the 
+                                    driver application state synced with the passenger application. <b>FCM</b> wasn't reliable in poor network conditions so we ended up using <b>SignalR</b>
+                                    along with it and an extra fallback funtion that pings the server to confirm states if both of them failed.
+                                </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="container has-text-centered download top-padding">
                 <h3 class="title">Download</h3>
                 <p>A UI only demo version is available</p>
                 <p>Use any 10 digit number to login and for paytm use any 6 digit OTP</p>
                 <a target="_blank" href='https://play.google.com/store/apps/details?id=com.gldraphael.kulocabs.mock&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-                    <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+                    <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'
+                    />
                 </a>
             </div>
         </section>
