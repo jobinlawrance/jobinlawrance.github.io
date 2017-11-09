@@ -16,24 +16,9 @@
                 </p>
             </div>
 
-            <!-- <div class="container block">
-                <div class="columns is-centered">
-                    <div class="column is-half content">
-                            <p class="title is-3 has-text-centered">Key Features</p>
-                            <ul>
-                                <li>Search for Black &amp; Yellow cabs near current location.</li>
-                                <li>Book a cab to anywhere in Mumbai.</li>
-                                <li>Live tracking the ride</li>
-                                <li>Online payment using Paytm</li>
-                                <li>Ride history with an option to email invoice</li>
-                            </ul>
-                    </div>
-                </div>
-            </div> -->
+            <div class="container block" id="ui">
 
-            <div class="container block">
-
-                <h3 class="title has-text-centered">Application Overview</h3>
+                <h3 class="title has-text-centered">UI Overview</h3>
 
                 <!-- <div class="block">
                     <div class="columns is-centered">
@@ -48,15 +33,14 @@
                 </div>   -->
 
                 <div class="block">
-                    <h4 class="title is-4 has-text-centered top-padding">Sign-Up/Login</h4>
+                    <h4 class="title is-4 has-text-centered top-padding">Sign Up/Log In</h4>
 
                     <div class="columns">
                         <div class="column content">
                             <ul>
-                                <li>Signing up or loging in only requires an active phone number to receive OTP as an sms</li>
+                                <li>Signing up or logging in only requires an active phone number to receive OTP as an sms</li>
                                 <li>OTP is automatically read from SMS</li>
-                                <li>OTP can also be manually entered incase the permission to read SMS is denied or SIM is not
-                                    present in the current phone. </li>
+                                <li>OTP can also be manually entered if the permission to read SMS is denied or if SIM card is not present in the current phone.</li>
                             </ul>
                         </div>
                         <div class="column has-text-right content">
@@ -81,7 +65,7 @@
                         <div class="column content">
                             <ul>
                                 <li>
-                                    <code>Pickup Location</code> - Current Location is automatically selected, can be changed within
+                                    <code>Pickup Location</code> - Current Location is automatically selected and can be changed within
                                     2.5 Km radius</li>
                                 <li>
                                     <code>Drop Location</code> - Places, saved or otherwise, can be searched and selected.</li>
@@ -115,8 +99,7 @@
                                     etc.)
                                 </li>
                                 <li>
-                                    <code>Emergency</code> - Once the ride has started, there is an Emergency button to call the
-                                    police.
+                                    <code>Emergency</code> - Once the ride has started, there is an Emergency button to call the police.
                                     <br>
                                     <img class="small-screenshot" src="../images/kulo_emergency.jpeg" alt="Emergency Image">
                                 </li>
@@ -130,7 +113,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="column content has-text-right">
+                        <div class="column content has-text-right" id="marker-anim">
                             <video poster="../images/kulo_ride.jpeg" playsinline autoplay muted loop>
                                 <source src="../videos/kulo_ride.mp4" type="video/mp4">
                             </video>
@@ -187,11 +170,22 @@
             </div>
 
             <div id="tech" class="container top-padding">
-                <h3 class="title has-text-centered">Technical Details</h3>
+                <h3 class="title has-text-centered">Details</h3>
                 <div class="content">
-                    <p>The above overview was only of the passenger application, the one that users interact with.</p>
-                    <p>There is a separate application used by cab drivers inorder to receive rides, navigate to users etc.
-                        The main flow of event is controlled by the driver application i.e
+                    <p>Kulo consists of two android applications - The passenger app and the driver app.</p>
+
+                    <h5><b>Passenger App</b></h5>
+
+                    The above UI overview was the passenger app. This is the application end users interact with.
+                        <ol>
+                            <li>While searching for a cab, the passenger application sends it's current location to the backend server, the server then searches for cabs around the location.</li>
+                            <li>Once a cab is found, the passenger app polls the server for cab location and updates it's UI by <a href="#marker-anim">animating a custom map marker.</a></li>
+                        </ol>
+
+                    <h5><b>Driver App</b></h5>
+
+                    <p>This application is used by cab drivers to mark themselves as <i>"available"</i> for rides, to accept rides, navigate to passengers etc.
+                        The main flow of event during the lifecycle of a cab ride is initiated by the driver application i.e
                         <br>
                         <ol>
                             <li>Accepting Ride requests from users.</li>
@@ -199,14 +193,14 @@
                             <li>Starting the ride once the passenger boards the cab.</li>
                             <li>
                                 Finishing the ride.
-                                <ul is-marginless>
+                                <ul>
                                     <li>In case of online payment, the driver enters the fare amount and user OTP. This amount
                                         is then deducted from the user associated wallet account. </li>
                                 </ul>
                             </li>
                         </ol>
                     </p>
-                    <p>Both these applications communicate using a .Net backend server made by my partner <a target="_blank" href="https://gldraphael.com/">Galdin Raphael</a></p>
+                    <p>Both these applications communicate using a .Net backend server developed by my partner <a target="_blank" href="https://gldraphael.com/">Galdin Raphael</a></p>
                 </div>
                 <h4 class="title is-4 has-text-centered">Technologies used</h4>
                 <div class="content">
@@ -256,7 +250,7 @@
                 </div>
             </div>
 
-            <div class="container has-text-centered download top-padding">
+            <div class="container has-text-centered download top-padding" id="download">
                 <h3 class="title">Download</h3>
                 <p>A UI only demo version is available</p>
                 <p>Use any 10 digit number to login and for paytm use any 6 digit OTP</p>
