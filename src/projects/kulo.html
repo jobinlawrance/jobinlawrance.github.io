@@ -235,12 +235,12 @@
                     <ol>
                             <li>
                                     <code>Networking</code> - Initially, all the networking was done using AsyncTasks, but as requirements became complex it became difficult to maintain code.
-                                   <br> The solution was <b>RxJava</b>, it made network request chaining or combining results of two requests very easy to implement and debug.
+                                   <br> The solution I used was <b>RxJava</b>, it made network request chaining or combining results of two requests very easy to implement and debug.
                                 </li>
                                 <li>
                                     <code>Runtime permissions</code> - Handing permissions in Android M and above required requesting permission in one place 
                                     and handling results in <code>onRequestPermissionsResult()</code>, this wasn't a major hindrance but rather an inconvenience.
-                                    <br>This issue was solved by <b>RxPermission</b>, it along with <b>RxBinding</b> makes the flow easy by chaining each event using <b>RxJava</b>.
+                                    <br>This issue was solved by <b>RxPermission</b>,along with <b>RxBinding</b> it makes the flow easy by chaining each event using <b>RxJava</b>.
                                 </li>
                                 <li><code>State Synchronisation</code> - The most difficult part of the application was to to keep the 
                                     driver application state synced with the passenger application. <b>FCM</b> wasn't reliable in poor network conditions so we ended up using <b>SignalR</b>
