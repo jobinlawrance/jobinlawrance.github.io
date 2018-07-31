@@ -94,7 +94,7 @@ gulp.task('css', function () {
 
 });
 
-gulp.task('revision', ['css'], function () {
+gulp.task('revision', gulp.series('css', function () {
 
     var sources = [folder.build + "**/*.css"]
 
@@ -110,9 +110,9 @@ gulp.task('revision', ['css'], function () {
         .pipe(gulp.dest(folder.build))
         .pipe(RevAll.manifestFile())
         .pipe(gulp.dest(folder.build))
-});
+}));
 
-gulp.task("revreplace", ['revision'], function () {
+gulp.task("revreplace", gulp.series('revision', function () {
     var manifest = gulp.src("./" + folder.build + "/rev-manifest.json");
 
     return gulp.src(folder.build + "/**/*.html")
@@ -121,7 +121,7 @@ gulp.task("revreplace", ['revision'], function () {
             replaceInExtensions: ['.js', '.css', '.html', '.hbs', '.jpg', '.png', '.mp4', '.webm']
         }))
         .pipe(gulp.dest(folder.build));
-});
+}));
 
 gulp.task('fontmin', function () {
     return gulp.src(folder.src + 'font/*.ttf')
@@ -155,6 +155,6 @@ gulp.task('watch', function() {
     
     });
 
-gulp.task('run', getTasks())
+gulp.task('run', gulp.series(getTasks()))
 
-gulp.task('default', ['run']);
+gulp.task('default', gulp.series('run'));
