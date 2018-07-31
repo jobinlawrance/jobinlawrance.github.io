@@ -1,14 +1,16 @@
 {
-  "css/main.css": "css/main.5bb51c9a.css",
-  "css/project.css": "css/project.e228efaf.css",
-  "fonts/OCR-B10PitchBT.css": "fonts/OCR-B10PitchBT.908cf948.css",
-  "videos/kulo_boarding.mp4": "videos/kulo_boarding.b649e670.mp4",
-  "videos/kulo_booking.mp4": "videos/kulo_booking.f082c1de.mp4",
-  "videos/kulo_locations.mp4": "videos/kulo_locations.63d38b16.mp4",
-  "videos/kulo_login.mp4": "videos/kulo_login.264be0ad.mp4",
-  "videos/kulo_paytm.mp4": "videos/kulo_paytm.242ce87b.mp4",
-  "videos/kulo_ride.mp4": "videos/kulo_ride.6860741c.mp4",
-  "videos/kulo_boarding.webm": "videos/kulo_boarding.72fd2916.webm",
-  "videos/kulo_booking.webm": "videos/kulo_booking.c494427f.webm",
-  "videos/kulo_login.webm": "videos/kulo_login.41cbbf8e.webm"
+  "css/main.4bd3d579.css": "css/main.4bd3d579.4bd3d579.css",
+  "css/main.css": "css/main.4bd3d579.css",
+  "css/project.cd8dc3a4.css": "css/project.cd8dc3a4.cd8dc3a4.css",
+  "css/project.css": "css/project.cd8dc3a4.css",
+  "fonts/OCR-B10PitchBT.908cf948.css": "fonts/OCR-B10PitchBT.908cf948.908cf948.css",
+  "videos/kulo_boarding.f56a8bd0.mp4": "videos/kulo_boarding.f56a8bd0.f56a8bd0.mp4",
+  "videos/kulo_booking.ff74cef5.mp4": "videos/kulo_booking.ff74cef5.ff74cef5.mp4",
+  "videos/kulo_locations.41e455bf.mp4": "videos/kulo_locations.41e455bf.41e455bf.mp4",
+  "videos/kulo_login.a52c383b.mp4": "videos/kulo_login.a52c383b.a52c383b.mp4",
+  "videos/kulo_paytm.35f91c24.mp4": "videos/kulo_paytm.35f91c24.35f91c24.mp4",
+  "videos/kulo_ride.6b43df9e.mp4": "videos/kulo_ride.6b43df9e.6b43df9e.mp4",
+  "videos/kulo_boarding.0ad81d22.webm": "videos/kulo_boarding.0ad81d22.0ad81d22.webm",
+  "videos/kulo_booking.5778c5e5.webm": "videos/kulo_booking.5778c5e5.5778c5e5.webm",
+  "videos/kulo_login.8d52dad0.webm": "videos/kulo_login.8d52dad0.8d52dad0.webm"
 }
